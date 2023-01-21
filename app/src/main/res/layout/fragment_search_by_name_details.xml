@@ -4,24 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#b20238"
     tools:context=".ui.searchbyname.SearchByNameDetailsFragment">
 
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="24dp"
         android:src="@drawable/noimage"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="139dp" />
-
+        tools:layout_editor_absoluteX="5dp" />
 
     <TextView
         android:id="@+id/typetv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:textColor="@color/white"
         android:gravity="center_horizontal"
         android:text="Type"
         android:textSize="30sp"
@@ -34,6 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:textColor="@color/white"
         android:gravity="center_horizontal"
         android:text="Imdb Id"
         android:textSize="30sp"
@@ -44,10 +46,11 @@
         android:id="@+id/titletv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="78dp"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="20dp"
         android:gravity="center_horizontal"
         android:text="Title"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/yearTv"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
@@ -60,6 +63,7 @@
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
         android:text="Year"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintTop_toBottomOf="@+id/titletv"
         tools:layout_editor_absoluteX="0dp"></TextView>
