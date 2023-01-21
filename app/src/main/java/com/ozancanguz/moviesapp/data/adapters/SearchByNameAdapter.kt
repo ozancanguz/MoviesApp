@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ozancanguz.moviesapp.R
 import com.ozancanguz.moviesapp.data.model.searchbyname.SearchByName
 import com.ozancanguz.moviesapp.data.model.searchbyname.SearchNameResult
+import com.ozancanguz.moviesapp.utils.Util.Companion.loadImage
 import kotlinx.android.synthetic.main.searchname_rv.view.*
 
 class SearchByNameAdapter:RecyclerView.Adapter<SearchByNameAdapter.SearchViewHolder>() {
@@ -36,6 +37,7 @@ class SearchByNameAdapter:RecyclerView.Adapter<SearchByNameAdapter.SearchViewHol
 
         // image loading with glide
 
+        holder.itemView.SearchNameimageView.loadImage(currentMovie.poster)
     }
 
     override fun getItemCount(): Int {

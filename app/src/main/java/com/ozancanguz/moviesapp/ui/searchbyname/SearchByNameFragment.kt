@@ -51,21 +51,21 @@ class SearchByNameFragment : Fragment() {
 
     private fun observeLiveData() {
 
-        binding.searchbtn.setOnClickListener {
-            binding.namePb.visibility=View.VISIBLE
+        binding.kktcsearchbtn.setOnClickListener {
+            binding.namepb.visibility=View.VISIBLE
             var searchText=binding.filmEditText.text.toString()
             searchByNameViewModel.searchFilmsByName(searchText)
             searchByNameViewModel.searchbyNameFilms.observe(viewLifecycleOwner, Observer {
                 searchByNameAdapter.setData(it)
-                binding.namePb.visibility=View.INVISIBLE
+                binding.namepb.visibility=View.INVISIBLE
             })
         }
 
     }
 
     private fun setupRv() {
-        binding.searchNameRv.layoutManager=LinearLayoutManager(requireContext())
-        binding.searchNameRv.adapter=searchByNameAdapter
+        binding.searchnameRv.layoutManager=LinearLayoutManager(requireContext())
+        binding.searchnameRv.adapter=searchByNameAdapter
 
     }
 

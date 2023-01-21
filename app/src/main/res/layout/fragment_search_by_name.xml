@@ -4,60 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.searchbyname.SearchByNameFragment">
+
+    >
 
     <ProgressBar
-        android:id="@+id/namePb"
-        android:layout_width="70dp"
-        android:layout_height="56dp"
+        android:id="@+id/namepb"
+        android:layout_width="94dp"
+        android:layout_height="64dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/searchNameRv"
+        app:layout_constraintBottom_toBottomOf="@+id/searchnameRv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/searchNameRv"
-        app:layout_constraintVertical_bias="0.426"></ProgressBar>
+        app:layout_constraintTop_toTopOf="@+id/searchnameRv"
+        app:layout_constraintVertical_bias="0.348"></ProgressBar>
 
     <EditText
         android:id="@+id/filmEditText"
-        android:layout_width="283dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="18dp"
-        android:hint="Film Ara..."
-        android:textColor="@color/black"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="31dp"
+        android:background="#b20238"
+        android:hint="Film Ara"
+        android:textColor="@color/white"
         android:textColorHint="#EAC522"
         android:textSize="21sp"
-        app:layout_constraintBottom_toTopOf="@+id/searchNameRv"
-        app:layout_constraintEnd_toStartOf="@+id/searchbtn"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBottom_toTopOf="@+id/searchnameRv"
+        app:layout_constraintEnd_toStartOf="@+id/kktcsearchbtn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"></EditText>
+        app:layout_constraintTop_toTopOf="parent"></EditText>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/searchNameRv"
-        android:layout_width="383dp"
-        android:layout_height="512dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="16dp"
+        android:id="@+id/searchnameRv"
+        android:layout_width="405dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchbtn" />
+        app:layout_constraintTop_toBottomOf="@+id/kktcsearchbtn"
+        tools:listitem="@layout/searchname_rv" />
 
     <Button
-        android:id="@+id/searchbtn"
+        android:id="@+id/kktcsearchbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="43dp"
         android:text="ARA"
-        app:layout_constraintBottom_toTopOf="@+id/searchNameRv"
+        android:background=" #d72631"
+        android:backgroundTint="#d72631"
+        app:layout_constraintBottom_toTopOf="@+id/searchnameRv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ileditText"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toEndOf="@+id/searchnameRv"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#b20238"
+    android:padding="5dp"
+    android:layout_margin="4dp"
     android:orientation="horizontal">
 
     <ImageView
@@ -23,7 +26,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
+            android:textColor="#e8d21d"
             android:text="Inception"
+
             android:textSize="24sp" />
 
         <TextView
@@ -31,9 +36,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" 2010"
+            android:textColor="#e8d21d"
             android:gravity="center_horizontal"
             android:textSize="20sp"
-            android:textColor="#666" />
+             />
 
     </LinearLayout>
 
