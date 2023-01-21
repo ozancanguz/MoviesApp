@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_searchByIdFragment_to_searchByIdDetailsFragment"
             app:destination="@id/searchByIdDetailsFragment" />
+        <action
+            android:id="@+id/action_searchByIdFragment_to_plotFragment"
+            app:destination="@id/plotFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchByIdDetailsFragment"
@@ -40,10 +43,22 @@
         <argument
             android:name="currentid"
             app:argType="com.ozancanguz.moviesapp.data.model.searchbyid.Result" />
+        <action
+            android:id="@+id/action_searchByIdDetailsFragment_to_plotFragment"
+            app:destination="@id/plotFragment" />
     </fragment>
     <fragment
         android:id="@+id/favoriteFilmsFragment"
         android:name="com.ozancanguz.moviesapp.ui.favoriteFilms.FavoriteFilmsFragment"
         android:label="Favorites"
         tools:layout="@layout/fragment_favorite_films" />
+    <fragment
+        android:id="@+id/plotFragment"
+        android:name="com.ozancanguz.moviesapp.ui.searchbyid.PlotFragment"
+        android:label="fragment_plot"
+        tools:layout="@layout/fragment_plot" >
+        <argument
+            android:name="currentPlot"
+            app:argType="com.ozancanguz.moviesapp.data.model.searchbyid.Result" />
+    </fragment>
 </navigation>

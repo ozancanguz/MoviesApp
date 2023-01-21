@@ -46,6 +46,9 @@ class SearchByIdDetailsFragment : Fragment() {
         binding.idimageview.loadImage(currentFilmId.poster)
         binding.plotbtn.setOnClickListener {
 
+            val action=SearchByIdDetailsFragmentDirections.actionSearchByIdDetailsFragmentToPlotFragment(currentFilmId)
+            findNavController().navigate(action)
+
         }
     }
 
