@@ -16,6 +16,7 @@ class SearchByIdAdapter:RecyclerView.Adapter<SearchByIdAdapter.IdViewHolder>() {
 
     fun setData(newData:SearchByIdModel){
         this.searchbyidList= listOf(newData.result)
+        notifyDataSetChanged()
     }
 
 
@@ -34,7 +35,6 @@ class SearchByIdAdapter:RecyclerView.Adapter<SearchByIdAdapter.IdViewHolder>() {
         holder.itemView.searchbyidimageview.loadImage(currentByIdModel.poster)
         holder.itemView.searchbyidtitle.text=currentByIdModel.title
         holder.itemView.searchbyidyear.text=currentByIdModel.year
-
 
     }
 
