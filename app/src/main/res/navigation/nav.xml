@@ -36,7 +36,11 @@
         android:id="@+id/searchByIdDetailsFragment"
         android:name="com.ozancanguz.moviesapp.ui.searchbyid.SearchByIdDetailsFragment"
         android:label="Details"
-        tools:layout="@layout/fragment_search_by_id_details" />
+        tools:layout="@layout/fragment_search_by_id_details" >
+        <argument
+            android:name="currentid"
+            app:argType="com.ozancanguz.moviesapp.data.model.searchbyid.Result" />
+    </fragment>
     <fragment
         android:id="@+id/favoriteFilmsFragment"
         android:name="com.ozancanguz.moviesapp.ui.favoriteFilms.FavoriteFilmsFragment"

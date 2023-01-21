@@ -1,8 +1,11 @@
 package com.ozancanguz.moviesapp.data.model.searchbyid
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Result(
     @SerializedName("Actors")
     val actors: String,
@@ -36,8 +39,7 @@ data class Result(
     val production: String,
     @SerializedName("Rated")
     val rated: String,
-    @SerializedName("Ratings")
-    val ratings: List<Rating>,
+
     @SerializedName("Released")
     val released: String,
     @SerializedName("Response")
@@ -54,4 +56,4 @@ data class Result(
     val writer: String,
     @SerializedName("Year")
     val year: String
-)
+):Parcelable

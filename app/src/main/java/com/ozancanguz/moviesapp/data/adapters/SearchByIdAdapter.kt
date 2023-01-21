@@ -3,10 +3,12 @@ package com.ozancanguz.moviesapp.data.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.ozancanguz.moviesapp.R
 import com.ozancanguz.moviesapp.data.model.searchbyid.SearchByIdModel
+import com.ozancanguz.moviesapp.ui.searchbyid.SearchByIdFragmentDirections
 import com.ozancanguz.moviesapp.utils.Util.Companion.loadImage
 import kotlinx.android.synthetic.main.searchbyid_rv.view.*
 
@@ -35,6 +37,12 @@ class SearchByIdAdapter:RecyclerView.Adapter<SearchByIdAdapter.IdViewHolder>() {
         holder.itemView.searchbyidimageview.loadImage(currentByIdModel.poster)
         holder.itemView.searchbyidtitle.text=currentByIdModel.title
         holder.itemView.searchbyidyear.text=currentByIdModel.year
+
+        holder.itemView.setOnClickListener {
+            val action2=SearchByIdFragmentDirections.actionSearchByIdFragmentToSearchByIdDetailsFragment(currentByIdModel)
+            holder.itemView.findNavController().navigate(action2)
+
+        }
 
     }
 
