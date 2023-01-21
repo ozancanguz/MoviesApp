@@ -27,7 +27,11 @@
         android:id="@+id/searchByIdFragment"
         android:name="com.ozancanguz.moviesapp.ui.searchbyid.SearchByIdFragment"
         android:label="Search By Id"
-        tools:layout="@layout/fragment_search_by_id" />
+        tools:layout="@layout/fragment_search_by_id" >
+        <action
+            android:id="@+id/action_searchByIdFragment_to_searchByIdDetailsFragment"
+            app:destination="@id/searchByIdDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchByIdDetailsFragment"
         android:name="com.ozancanguz.moviesapp.ui.searchbyid.SearchByIdDetailsFragment"
