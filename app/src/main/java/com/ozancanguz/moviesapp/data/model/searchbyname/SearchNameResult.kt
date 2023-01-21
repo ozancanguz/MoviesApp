@@ -1,8 +1,11 @@
 package com.ozancanguz.moviesapp.data.model.searchbyname
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class SearchNameResult(
     @SerializedName("imdbID")
     val imdbID: String,
@@ -14,4 +17,4 @@ data class SearchNameResult(
     val type: String,
     @SerializedName("Year")
     val year: String
-)
+):Parcelable

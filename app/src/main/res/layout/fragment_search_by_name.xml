@@ -11,6 +11,7 @@
         android:id="@+id/namepb"
         android:layout_width="94dp"
         android:layout_height="64dp"
+        android:backgroundTint="#b20238"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/searchnameRv"
         app:layout_constraintEnd_toEndOf="parent"

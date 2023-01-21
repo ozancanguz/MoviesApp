@@ -7,5 +7,62 @@
     tools:context=".ui.searchbyname.SearchByNameDetailsFragment">
 
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/noimage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="139dp" />
+
+
+    <TextView
+        android:id="@+id/typetv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Type"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/yearTv"
+        tools:layout_editor_absoluteX="0dp"></TextView>
+
+
+    <TextView
+        android:id="@+id/imdbIdtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Imdb Id"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/typetv"
+        tools:layout_editor_absoluteX="0dp"></TextView>
+
+    <TextView
+        android:id="@+id/titletv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="78dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:text="Title"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/yearTv"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteX="0dp"></TextView>
+
+    <TextView
+        android:id="@+id/yearTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Year"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/titletv"
+        tools:layout_editor_absoluteX="0dp"></TextView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,12 +9,20 @@
         android:id="@+id/searchByNameFragment"
         android:name="com.ozancanguz.moviesapp.ui.searchbyname.SearchByNameFragment"
         android:label="Search By Name"
-        tools:layout="@layout/fragment_search_by_name" />
+        tools:layout="@layout/fragment_search_by_name" >
+        <action
+            android:id="@+id/action_searchByNameFragment_to_searchByNameDetailsFragment"
+            app:destination="@id/searchByNameDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchByNameDetailsFragment"
         android:name="com.ozancanguz.moviesapp.ui.searchbyname.SearchByNameDetailsFragment"
         android:label="Details"
-        tools:layout="@layout/fragment_search_by_name_details" />
+        tools:layout="@layout/fragment_search_by_name_details" >
+        <argument
+            android:name="CurrentNameDetails"
+            app:argType="com.ozancanguz.moviesapp.data.model.searchbyname.SearchNameResult" />
+    </fragment>
     <fragment
         android:id="@+id/searchByIdFragment"
         android:name="com.ozancanguz.moviesapp.ui.searchbyid.SearchByIdFragment"
