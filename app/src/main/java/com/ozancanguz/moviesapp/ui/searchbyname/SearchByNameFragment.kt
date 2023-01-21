@@ -1,11 +1,13 @@
 package com.ozancanguz.moviesapp.ui.searchbyname
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.ozancanguz.moviesapp.R
 import com.ozancanguz.moviesapp.databinding.FragmentSearchByNameBinding
 import com.ozancanguz.moviesapp.viewmodels.SearchByNameViewModel
@@ -37,6 +39,14 @@ class SearchByNameFragment : Fragment() {
     }
 
     private fun observeLiveData() {
+
+        binding.searchbtn.setOnClickListener {
+            var searchText=binding.filmEditText.text.toString()
+            searchByNameViewModel.searchFilmsByName(searchText)
+            searchByNameViewModel.searchbyNameFilms.observe(viewLifecycleOwner, Observer {
+                Log.d("searchBynameScreen","" +it)
+            })
+        }
 
     }
 
