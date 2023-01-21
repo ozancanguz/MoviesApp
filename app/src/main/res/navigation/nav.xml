@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_searchByNameFragment_to_searchByNameDetailsFragment"
             app:destination="@id/searchByNameDetailsFragment" />
+        <action
+            android:id="@+id/action_searchByNameFragment_to_searchByNamePlot"
+            app:destination="@id/searchByNamePlot" />
     </fragment>
     <fragment
         android:id="@+id/searchByNameDetailsFragment"
@@ -22,6 +25,9 @@
         <argument
             android:name="CurrentNameDetails"
             app:argType="com.ozancanguz.moviesapp.data.model.searchbyname.SearchNameResult" />
+        <action
+            android:id="@+id/action_searchByNameDetailsFragment_to_searchByNamePlot"
+            app:destination="@id/searchByNamePlot" />
     </fragment>
     <fragment
         android:id="@+id/searchByIdFragment"
@@ -34,6 +40,9 @@
         <action
             android:id="@+id/action_searchByIdFragment_to_plotFragment"
             app:destination="@id/plotFragment" />
+        <action
+            android:id="@+id/action_searchByIdFragment_to_searchByNamePlot"
+            app:destination="@id/searchByNamePlot" />
     </fragment>
     <fragment
         android:id="@+id/searchByIdDetailsFragment"
@@ -55,10 +64,19 @@
     <fragment
         android:id="@+id/plotFragment"
         android:name="com.ozancanguz.moviesapp.ui.searchbyid.PlotFragment"
-        android:label="fragment_plot"
+        android:label="Search By id Plot"
         tools:layout="@layout/fragment_plot" >
         <argument
             android:name="currentPlot"
             app:argType="com.ozancanguz.moviesapp.data.model.searchbyid.Result" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchByNamePlot"
+        android:name="com.ozancanguz.moviesapp.ui.searchbyname.plot.SearchByNamePlot"
+        android:label="Search By Name Plot"
+        tools:layout="@layout/fragment_search_by_name_plot" >
+        <argument
+            android:name="currentNamePlot"
+            app:argType="com.ozancanguz.moviesapp.data.model.searchbyname.SearchNameResult" />
     </fragment>
 </navigation>

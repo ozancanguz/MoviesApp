@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.ozancanguz.moviesapp.R
 import com.ozancanguz.moviesapp.databinding.FragmentSearchByNameDetailsBinding
@@ -44,6 +45,7 @@ class SearchByNameDetailsFragment : Fragment() {
         binding.typetv.text="Tür: "+currenSearchName.type
         binding.yearTv.text="Yıl: "+currenSearchName.year
         binding.imdbIdtv.text="Imdb Id: "+currenSearchName.imdbID
+
     }
 
 

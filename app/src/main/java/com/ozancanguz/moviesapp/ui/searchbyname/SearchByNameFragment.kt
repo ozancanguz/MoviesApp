@@ -63,6 +63,8 @@ class SearchByNameFragment : Fragment() {
 
     }
 
+
+
     private fun setupRv() {
         binding.searchnameRv.layoutManager=LinearLayoutManager(requireContext())
         binding.searchnameRv.adapter=searchByNameAdapter

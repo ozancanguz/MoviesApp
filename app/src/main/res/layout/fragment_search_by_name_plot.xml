@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#b20238"
+    tools:context=".ui.searchbyname.plot.SearchByNamePlot">
+
+    <ImageView
+        android:id="@+id/nameplotimage"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/noimage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="134dp" />
+
+    <TextView
+        android:id="@+id/nameplottv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameplotimage"
+        app:layout_constraintVertical_bias="0.118"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="27sp"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="283dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -50,6 +50,7 @@ class SearchByNameAdapter:RecyclerView.Adapter<SearchByNameAdapter.SearchViewHol
         }
 
 
+
     }
 
     override fun getItemCount(): Int {
