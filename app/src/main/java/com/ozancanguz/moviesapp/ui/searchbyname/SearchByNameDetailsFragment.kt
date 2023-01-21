@@ -8,14 +8,14 @@ import android.view.ViewGroup
 import com.ozancanguz.moviesapp.R
 
 
-class SearchByIdFragment : Fragment() {
+class SearchByNameDetailsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search_by_id, container, false)
+        return inflater.inflate(R.layout.fragment_search_by_name_details, container, false)
     }
 
 

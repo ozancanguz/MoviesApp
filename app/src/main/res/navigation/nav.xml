@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/searchByNameFragment">
 
+    <fragment
+        android:id="@+id/searchByNameFragment"
+        android:name="com.ozancanguz.moviesapp.ui.searchbyname.SearchByNameFragment"
+        android:label="Search By Name"
+        tools:layout="@layout/fragment_search_by_name" />
+    <fragment
+        android:id="@+id/searchByNameDetailsFragment"
+        android:name="com.ozancanguz.moviesapp.ui.searchbyname.SearchByNameDetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_search_by_name_details" />
+    <fragment
+        android:id="@+id/searchByIdFragment"
+        android:name="com.ozancanguz.moviesapp.ui.searchbyid.SearchByIdFragment"
+        android:label="Search By Id"
+        tools:layout="@layout/fragment_search_by_id" />
+    <fragment
+        android:id="@+id/searchByIdDetailsFragment"
+        android:name="com.ozancanguz.moviesapp.ui.searchbyid.SearchByIdDetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_search_by_id_details" />
+    <fragment
+        android:id="@+id/favoriteFilmsFragment"
+        android:name="com.ozancanguz.moviesapp.ui.favoriteFilms.FavoriteFilmsFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorite_films" />
 </navigation>

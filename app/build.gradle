@@ -9,12 +9,12 @@ plugins {
 
 android {
     namespace 'com.ozancanguz.moviesapp'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.ozancanguz.moviesapp"
         minSdk 24
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 

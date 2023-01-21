@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/searchByNameFragment"
+        android:title=" Search Name"
+        android:icon="@drawable/search1"></item>
+
+    <item android:id="@+id/searchByIdFragment"
+        android:title="Search Id"
+        android:icon="@drawable/search2"></item>
+
+    <item android:id="@+id/favoriteFilmsFragment"
+        android:title="Food Joke"
+        android:icon="@drawable/favorites"></item>
+</menu>
