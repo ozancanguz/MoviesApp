@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.ozancanguz.moviesapp.R
+import com.ozancanguz.moviesapp.data.adapters.SearchByNameAdapter
 import com.ozancanguz.moviesapp.databinding.FragmentSearchByNameBinding
 import com.ozancanguz.moviesapp.viewmodels.SearchByNameViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -22,6 +24,9 @@ class SearchByNameFragment : Fragment() {
 
     private val searchByNameViewModel:SearchByNameViewModel by viewModels()
 
+    private val searchByNameAdapter=SearchByNameAdapter()
+
+
 
 
     override fun onCreateView(
@@ -34,19 +39,33 @@ class SearchByNameFragment : Fragment() {
         // observe live data and update ui
         observeLiveData()
 
+        // setup recyclerview
+        setupRv()
+
+
 
         return view
     }
 
+
+
     private fun observeLiveData() {
 
         binding.searchbtn.setOnClickListener {
+            binding.namePb.visibility=View.VISIBLE
             var searchText=binding.filmEditText.text.toString()
             searchByNameViewModel.searchFilmsByName(searchText)
             searchByNameViewModel.searchbyNameFilms.observe(viewLifecycleOwner, Observer {
-                Log.d("searchBynameScreen","" +it)
+                searchByNameAdapter.setData(it)
+                binding.namePb.visibility=View.INVISIBLE
             })
         }
+
+    }
+
+    private fun setupRv() {
+        binding.searchNameRv.layoutManager=LinearLayoutManager(requireContext())
+        binding.searchNameRv.adapter=searchByNameAdapter
 
     }
 
