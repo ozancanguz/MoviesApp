@@ -1,6 +1,6 @@
 # MoviesApp
 
--I am building a movie application from imdb .We can search either by id or name.
+-I have developed an android mobile movie application using imdb api .We can search either by id or name.
 Also we can add favorite movie to favorite screen.
 
 **Tools that I used** :
