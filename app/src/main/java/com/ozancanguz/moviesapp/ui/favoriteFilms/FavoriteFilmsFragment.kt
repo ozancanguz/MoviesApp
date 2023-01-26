@@ -1,7 +1,10 @@
 package com.ozancanguz.moviesapp.ui.favoriteFilms
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -62,6 +65,41 @@ class FavoriteFilmsFragment : Fragment() {
 
         inflater.inflate(R.menu.deleteallmenu,menu)
         super.onCreateOptionsMenu(menu, inflater)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if(item.itemId ==R.id.delete_all_menu){
+
+
+            val builder = AlertDialog.Builder(requireContext())
+
+            builder.setMessage("Do you want to delete all favorites ?")
+
+            builder.setTitle("Delete all favorites !")
+
+            builder.setCancelable(false)
+
+            builder.setPositiveButton("Yes",
+                DialogInterface.OnClickListener { dialog: DialogInterface?, which: Int ->
+                    searchByIdViewModel.deleteAll()
+                    Toast.makeText(requireContext(),"All favorites are deleted",Toast.LENGTH_LONG).show()
+                })
+
+            builder.setNegativeButton("No",
+                DialogInterface.OnClickListener { dialog: DialogInterface, which: Int ->
+
+                    dialog.cancel()
+                } )
+
+            val alertDialog = builder.create()
+            alertDialog.show()
+
+
+
+
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 
 
