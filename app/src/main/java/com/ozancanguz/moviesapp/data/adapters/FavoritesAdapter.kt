@@ -19,6 +19,7 @@ class FavoritesAdapter:RecyclerView.Adapter<FavoritesAdapter.FavoriteViewHolder>
 
     fun setData(newData:List<FavoritesEntity>){
         this.favoritesList=newData
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteViewHolder {
