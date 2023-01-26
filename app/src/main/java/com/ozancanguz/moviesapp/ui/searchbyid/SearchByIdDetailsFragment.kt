@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.*
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -45,17 +46,22 @@ class SearchByIdDetailsFragment : Fragment() {
 
     }
 
-    fun saveToFavorites(){
+    fun saveToFavorites(item: MenuItem){
         var favoritesEntity= FavoritesEntity(0,args.currentid)
         searchByIdViewModel.insertFavoriteProduct(favoritesEntity)
+        changeMenuItemColor(item,R.color.purple_200)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId==R.id.savetofavmenu){
-            saveToFavorites()
+            saveToFavorites(item)
             Toast.makeText(requireContext(),"Save to favorites", Toast.LENGTH_LONG).show()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun changeMenuItemColor(item: MenuItem, color: Int) {
+        item.icon?.setTint(ContextCompat.getColor(requireContext(),color))
     }
 
 
@@ -64,6 +70,8 @@ class SearchByIdDetailsFragment : Fragment() {
         inflater.inflate(R.menu.fav_menu,menu)
         super.onCreateOptionsMenu(menu, inflater)
     }
+
+
 
 
 
