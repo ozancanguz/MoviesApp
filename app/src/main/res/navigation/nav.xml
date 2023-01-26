@@ -60,7 +60,11 @@
         android:id="@+id/favoriteFilmsFragment"
         android:name="com.ozancanguz.moviesapp.ui.favoriteFilms.FavoriteFilmsFragment"
         android:label="Favorites"
-        tools:layout="@layout/fragment_favorite_films" />
+        tools:layout="@layout/fragment_favorite_films" >
+        <action
+            android:id="@+id/action_favoriteFilmsFragment_to_searchByIdDetailsFragment"
+            app:destination="@id/searchByIdDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/plotFragment"
         android:name="com.ozancanguz.moviesapp.ui.searchbyid.PlotFragment"

@@ -3,9 +3,12 @@ package com.ozancanguz.moviesapp.data.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.ozancanguz.moviesapp.R
 import com.ozancanguz.moviesapp.data.db.FavoritesEntity
+import com.ozancanguz.moviesapp.ui.favoriteFilms.FavoriteFilmsFragment
+import com.ozancanguz.moviesapp.ui.favoriteFilms.FavoriteFilmsFragmentDirections
 import com.ozancanguz.moviesapp.utils.Util.Companion.loadImage
 import kotlinx.android.synthetic.main.searchbyid_fav_row_layout.view.*
 
@@ -34,6 +37,10 @@ class FavoritesAdapter:RecyclerView.Adapter<FavoritesAdapter.FavoriteViewHolder>
         holder.itemView.searchbyidfavtitle.text=currentFavoritesEntity.movies.title
         holder.itemView.searchbyidfavyear.text=currentFavoritesEntity.movies.year
 
+        holder.itemView.setOnClickListener {
+            val action=FavoriteFilmsFragmentDirections.actionFavoriteFilmsFragmentToSearchByIdDetailsFragment(currentFavoritesEntity.movies)
+            holder.itemView.findNavController().navigate(action)
+        }
 
     }
 
