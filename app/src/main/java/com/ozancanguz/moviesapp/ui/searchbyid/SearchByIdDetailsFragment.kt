@@ -1,10 +1,8 @@
 package com.ozancanguz.moviesapp.ui.searchbyid
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.ozancanguz.moviesapp.R
@@ -34,8 +32,16 @@ class SearchByIdDetailsFragment : Fragment() {
 
         updateUi()
 
+        setHasOptionsMenu(true)
+
         return view
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+
+        inflater.inflate(R.menu.fav_menu,menu)
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
     private fun updateUi() {

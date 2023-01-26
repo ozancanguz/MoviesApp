@@ -79,4 +79,5 @@
             android:name="currentNamePlot"
             app:argType="com.ozancanguz.moviesapp.data.model.searchbyname.SearchNameResult" />
     </fragment>
+
 </navigation>

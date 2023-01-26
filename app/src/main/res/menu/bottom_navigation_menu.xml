@@ -10,6 +10,6 @@
         android:icon="@drawable/search2"></item>
 
     <item android:id="@+id/favoriteFilmsFragment"
-        android:title="Food Joke"
+        android:title="Favorites"
         android:icon="@drawable/favorites"></item>
 </menu>

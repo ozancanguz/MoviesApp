@@ -30,6 +30,8 @@ class PlotFragment : Fragment() {
 
        updateUi()
 
+
+
         return view
     }
 
