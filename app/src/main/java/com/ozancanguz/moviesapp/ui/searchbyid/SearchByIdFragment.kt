@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ozancanguz.moviesapp.R
 import com.ozancanguz.moviesapp.data.adapters.SearchByIdAdapter
+import com.ozancanguz.moviesapp.data.db.FavoritesEntity
 import com.ozancanguz.moviesapp.data.model.searchbyid.SearchByIdModel
 import com.ozancanguz.moviesapp.databinding.FragmentSearchByIdBinding
 import com.ozancanguz.moviesapp.viewmodels.SearchByIdViewModel
@@ -60,9 +61,8 @@ class SearchByIdFragment : Fragment() {
                 binding.idpb.visibility=View.INVISIBLE
 
             })
+        } }
 
-        }
-    }
 
 
 }
