@@ -29,6 +29,13 @@ class SearchByIdViewModel @Inject constructor(private val repository: Repository
         }
     }
 
+    // delete all from fav screen
+    fun deleteAll(){
+        viewModelScope.launch {
+            repository.local.deleteAll()
+        }
+    }
+
 
 
     // retrofit function
