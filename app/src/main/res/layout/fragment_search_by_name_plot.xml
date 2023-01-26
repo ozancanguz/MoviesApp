@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#b20238"
+    android:background="#5D8A22"
     tools:context=".ui.searchbyname.plot.SearchByNamePlot">
 
     <ImageView

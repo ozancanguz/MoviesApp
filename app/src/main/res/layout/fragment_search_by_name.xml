@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#5D8A22"
     android:layout_height="match_parent"
 
     >
@@ -52,14 +53,14 @@
 
     <Button
         android:id="@+id/kktcsearchbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="57dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="43dp"
-        android:text="ARA"
         android:background=" #d72631"
         android:backgroundTint="#d72631"
+        android:text="ARA"
         app:layout_constraintBottom_toTopOf="@+id/searchnameRv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.893"
