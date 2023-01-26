@@ -39,7 +39,6 @@ data class Result(
     val production: String,
     @SerializedName("Rated")
     val rated: String,
-
     @SerializedName("Released")
     val released: String,
     @SerializedName("Response")

@@ -1,6 +1,7 @@
 package com.ozancanguz.moviesapp.ui.searchbyid
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -38,10 +39,19 @@ class SearchByIdDetailsFragment : Fragment() {
 
     }
 
+    // create fav menu
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-
         inflater.inflate(R.menu.fav_menu,menu)
         super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    // fav menu onclick
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId==R.id.savetofavmenu){
+          Log.d("detail-screen","Fav save")
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 
     private fun updateUi() {
