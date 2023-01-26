@@ -17,4 +17,9 @@ class LocalDataSource@Inject constructor(private val favoriteDao: FavoritesDao) 
     suspend fun insertFavorites(favoritesEntity: FavoritesEntity){
         return favoriteDao.insertFavProduct(favoritesEntity)
     }
+
+    // delete all from fav
+    suspend fun deleteAll(){
+        return favoriteDao.deleteAll()
+    }
 }
