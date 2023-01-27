@@ -26,6 +26,9 @@ Also we can add favorite movie to favorite screen.
 
 ---------------------------HERE IS THE DEMO --------------------------------------
 
+![movieapp](https://user-images.githubusercontent.com/64928807/215090279-dc5be845-86e2-41c0-9c6c-d7f02549e078.gif)
+
+
 
 
 
