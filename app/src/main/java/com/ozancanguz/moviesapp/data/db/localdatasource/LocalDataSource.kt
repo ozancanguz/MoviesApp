@@ -8,8 +8,7 @@ import javax.inject.Inject
 
 class LocalDataSource@Inject constructor(private val favoriteDao: FavoritesDao) {
 
-// for favorites product
-
+// for favorites product0
     fun listAllFavoritesProducts(): Flow<List<FavoritesEntity>> {
         return favoriteDao.listallFavorites()
     }

@@ -83,6 +83,7 @@ class FavoriteFilmsFragment : Fragment() {
                 DialogInterface.OnClickListener { dialog: DialogInterface?, which: Int ->
                     searchByIdViewModel.deleteAll()
                     Toast.makeText(requireContext(),"All favorites are deleted",Toast.LENGTH_LONG).show()
+                    binding.notfavimg.visibility=View.VISIBLE
                 })
 
             builder.setNegativeButton("No",
